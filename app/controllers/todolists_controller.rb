@@ -1,8 +1,9 @@
 class TodolistsController < ApplicationController
   def new
     @list = List.new
+  
   end
-end
+
 
   def create
     # １. データを新規登録するためのインスタンス作成
@@ -12,12 +13,12 @@ end
     # ３. トップ画面へリダイレクト
     redirect_to '/top'
   end
-  
-  def index
+
+ def index
     @lists = List.all
-    
-  
-  end
+ end
+ 
+end 
 
   private
   # ストロングパラメータ
